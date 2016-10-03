@@ -1,0 +1,16 @@
+<div ng-controller=UserController>
+   <div>
+       {{moduleName}} - {{signIn}}
+   </div>
+    
+    <br>
+    
+    <form ng-submit="signInApi()">
+        <input ng-model="user.username" type="text" name="username" placeholder="Username" />
+        <input ng-model="user.password" type="password" name="password" placeholder="Password" />
+        <input type="submit" value="Sign-in" />
+    </form>    
+  
+    <div ng-show="response">{{response}}</div>
+    
+</div>

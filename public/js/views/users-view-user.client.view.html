@@ -1,0 +1,16 @@
+<div ng-controller=UserController ng-init=viewUserApi()>
+   <div>
+       {{moduleName}} - {{viewUser}}
+   </div>
+    
+    <br>
+    
+    <div ng-show="response">{{response}}</div>
+        
+    <form ng-submit="editUserApi()">
+        <input ng-model="user.username" type="text" name="username" placeholder="Username" />
+        <input ng-model="user.password" type="text" name="password" placeholder="Password" />
+        <input type="submit" value="Edit" />
+    </form>    
+    <a href="/#!/users/{{response.id}}" ng-click="deleteUserApi()">Delete User</a>
+</div>

@@ -1,0 +1,23 @@
+<div ng-controller=UserController>
+   <div>
+       {{moduleName}} - {{viewAllUsers}}
+   </div>
+    
+    <br>
+    
+    <form ng-submit="viewAllUsersApi()">
+        <input type="submit" value="View All Users" />
+    </form>
+    
+    <div ng-show="response">{{response}}</div>
+    
+    <div ng-show="response">
+        <table>
+            <tr ng-repeat="x in response">
+                <td>{{x.username}}</td>
+                <td><a ng-href="/#!/users/{{x.id}}">View User</a></td>                
+            </tr>
+        </table>
+    </div>
+    
+</div>

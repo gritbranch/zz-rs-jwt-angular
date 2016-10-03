@@ -1,0 +1,11 @@
+<div ng-controller=UserController>
+   <div>
+       {{moduleName}} - {{signOut}}
+   </div>
+ 
+    <form ng-submit="signOutApi()">
+        <input type="submit" value="Sign-out" />
+    </form>    
+    
+    <div ng-show="response">{{response}}</div>
+</div>
