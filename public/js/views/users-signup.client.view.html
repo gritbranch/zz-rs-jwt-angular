@@ -1,16 +1,33 @@
 <div ng-controller=UserController>
-   <div>
-       {{moduleName}} - {{signUp}}
-   </div>
+    <div id="fh5co-work-section">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center heading-section">
+
+                 <h3>{{moduleName}} - {{signUp}}</h3>
+
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
     
-    <br>
-    
-    <form ng-submit="signUpApi()">
-        <input ng-model="user.username" type="text" name="username" placeholder="Username" />
-        <input ng-model="user.password" type="password" name="password" placeholder="Password" />
-        <input type="submit" value="Sign-up" />
-    </form>
-    
-    <div ng-show="response">{{response}}</div>
-    
+                <form ng-submit="signUpApi()">
+                    
+                    <div class="form-group">
+                        <input ng-model="user.username" type="text" name="username" placeholder="Username" />
+                    </div>              
+
+                    <div class="form-group">
+                        <input ng-model="user.password" type="password" name="password" placeholder="Password" />
+                    </div>                  
+
+                    <div class="form-group">
+                        <input type="submit" value="Sign-Up" class="btn btn-primary">
+                    </div>                  
+                
+                </form>   
+                    
+                <div ng-show="response">{{response}}</div>
+                  
+              </div>      
+           </div>
+        </div>
+    </div>    
 </div>

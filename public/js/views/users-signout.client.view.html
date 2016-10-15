@@ -1,11 +1,25 @@
 <div ng-controller=UserController>
-   <div>
-       {{moduleName}} - {{signOut}}
-   </div>
- 
-    <form ng-submit="signOutApi()">
-        <input type="submit" value="Sign-out" />
-    </form>    
+    <div id="fh5co-work-section">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center heading-section">
+
+                 <h3>{{moduleName}} - {{signOut}}</h3>
+
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
     
-    <div ng-show="response">{{response}}</div>
+                <form ng-submit="signOutApi()">        
+
+                    <div class="form-group">
+                        <input type="submit" value="Sign-out" class="btn btn-primary">
+                    </div>                  
+                
+                </form>   
+                    
+                <div ng-show="response">{{response}}</div>
+                  
+              </div>      
+           </div>
+        </div>
+    </div>    
 </div>

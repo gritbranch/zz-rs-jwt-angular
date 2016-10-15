@@ -1,16 +1,35 @@
 <div ng-controller=UserController ng-init=viewUserApi()>
-   <div>
-       {{moduleName}} - {{viewUser}}
-   </div>
+    <div id="fh5co-work-section">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center heading-section">
+
+                 <h3>{{moduleName}} - {{viewUser}}</h3>
+
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+                  
+                 <p ng-show="response">{{response}}</p>  
     
-    <br>
-    
-    <div ng-show="response">{{response}}</div>
-        
-    <form ng-submit="editUserApi()">
-        <input ng-model="user.username" type="text" name="username" placeholder="Username" />
-        <input ng-model="user.password" type="text" name="password" placeholder="Password" />
-        <input type="submit" value="Edit" />
-    </form>    
-    <a href="/#!/users/{{response.id}}" ng-click="deleteUserApi()">Delete User</a>
+                <form ng-submit="editUserApi()">        
+
+                    <div class="form-group">
+                        <input ng-model="user.username" type="text" name="username" placeholder="Username" />
+                    </div>              
+
+                    <div class="form-group">
+                        <input ng-model="user.password" type="password" name="password" placeholder="Password" />
+                    </div>                  
+
+                    <div class="form-group">
+                        <input type="submit" value="Edit" class="btn btn-primary">
+                    </div>                      
+                
+                </form>   
+                    
+                <a href="/#!/users/{{response.id}}" ng-click="deleteUserApi()">Delete User</a>
+                  
+              </div>      
+           </div>
+        </div>
+    </div>    
 </div>

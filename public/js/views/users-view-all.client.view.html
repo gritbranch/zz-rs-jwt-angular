@@ -1,23 +1,34 @@
 <div ng-controller=UserController>
-   <div>
-       {{moduleName}} - {{viewAllUsers}}
-   </div>
+    <div id="fh5co-work-section">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-8 col-md-offset-2 text-center heading-section">
+
+                 <h3>{{moduleName}} - {{viewAllUsers}}</h3>
+
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
     
-    <br>
-    
-    <form ng-submit="viewAllUsersApi()">
-        <input type="submit" value="View All Users" />
-    </form>
-    
-    <div ng-show="response">{{response}}</div>
-    
-    <div ng-show="response">
-        <table>
-            <tr ng-repeat="x in response">
-                <td>{{x.username}}</td>
-                <td><a ng-href="/#!/users/{{x.id}}">View User</a></td>                
-            </tr>
-        </table>
-    </div>
-    
+                <form ng-submit="viewAllUsersApi()">
+
+                    <div class="form-group">
+                        <input type="submit" value="View All Users" class="btn btn-primary">
+                    </div>                  
+                
+                </form>   
+                    
+                <div ng-show="response">{{response}}</div>
+
+                <div ng-show="response">
+                    <table>
+                        <tr ng-repeat="x in response">
+                            <td>{{x.username}}</td>
+                            <td><a ng-href="/#!/users/{{x.id}}">View User</a></td>                
+                        </tr>
+                    </table>
+                </div>
+                  
+              </div>      
+           </div>
+        </div>
+    </div>    
 </div>
